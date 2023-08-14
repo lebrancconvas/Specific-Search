@@ -25,48 +25,6 @@
     ]
   };
 
-  let processKeyword = (keywords: IKeyword[]) => {
-    let keywordString = '';
-    keywords.forEach((keyword, index) => {
-      if(keyword.keyword.trim() !== '') {
-        keywordString += `${processStrictKeyword(keyword)} `;
-      }
-    });
-
-    return keywordString;
-  }
-
-  let processStrictKeyword = (keyword: IKeyword): string => {
-
-    if(keyword.keyword.trim() !== '' && keyword.strict) {
-      return `"${keyword.keyword}"`;
-    }
-
-    return keyword.keyword;
-  };
-
-  let processWeb = (url: string) => {
-    if(url.trim() !== '') {
-      return `site:${url}`;
-    }
-
-    return '';
-  };
-
-  let processTime = (fromTime: string, toTime: string) => {
-    fromTime = fromTime.trim();
-    toTime = toTime.trim();
-    if(fromTime !== '' && toTime !== '') {
-      return `before:${toTime} after:${fromTime}`;
-    } else if(fromTime !== '') {
-      return `after:${fromTime}`;
-    } else if(toTime !== '') {
-      return `before:${toTime}`;
-    } else {
-      return '';
-    }
-  }
-
   let clearKeyword = (keyword: IKeyword) => {
     alert('This Feature is not available yet');
   }
@@ -178,11 +136,6 @@
 
   main {
     text-align: center;
-  }
-
-  #input-section #action-section {
-    display: block;
-    margin: 10px;
   }
 
   input {
