@@ -1,5 +1,8 @@
-<script>
+<!-- Example -->
+<!-- URL: https://www.google.com/search?q=site%3Aytn.co.kr+%22Corn%22&sca_esv=556766949&sxsrf=AB5stBh6umVNjc7EIXb70JcofM10lQKqjw%3A1692022015372&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2011%2Ccd_max%3A12%2F31%2F2019&tbm= -->
+<script lang="ts">
   // your script goes here
+
 </script>
 
 <svelte:head>
@@ -25,7 +28,7 @@
     </section>
   </main>
   <footer>
-    <p>Copyright 2023, Made by <a href="https://github.com/lebrancconvas">Poom Yimyuean (@lebrancconvas)</a></p>
+    <p>Copyright 2023, Made by <a href="https://github.com/lebrancconvas" target="_blank">Poom Yimyuean (@lebrancconvas)</a></p>
   </footer>
 </div>
 
