@@ -67,11 +67,21 @@
 
     let keywords = processSearchKeywords.join('+%2B+');
 
-
-
     let urlResult = `https://google.com/search?q=${resultWeb}+${keywords}${resultTime}`;
     window.open(urlResult, '_blank');
   }
+
+  let reset = () => {
+    searchWebsite = '';
+    searchKeywords = [
+      {
+        keyword: '',
+        strict: false
+      }
+    ];
+    fromTime = '';
+    toTime = '';
+  };
 
 </script>
 
@@ -107,6 +117,8 @@
     <br><br>
     <section id="action-section">
       <button id="add-button" on:click={addKeyword}>Add Keyword</button>
+      <button id="reset-button" on:click={reset}>Reset</button>
+      <br><br>
       <button id="search-button" on:click={handleSearch}>
         Search
       </button>
@@ -162,6 +174,7 @@
   #search-button {
     background-color: rgb(0, 0, 255);
     color: rgb(255, 255, 255);
+    font-size: 20px;
   }
 
   #clear-button {
