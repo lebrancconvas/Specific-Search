@@ -98,15 +98,15 @@
         <label for="keyword">Search Keyword</label>
         <input type="text" name="keyword" id="input-keyword" bind:value={searchKeywords[index].keyword}>
         <input type="checkbox" name="isStrict" id="input-check-isstrict" bind:checked={searchKeywords[index].strict}>
-        <button on:click={() => clearKeyword(keyword)}>Clear</button>
-        <button on:click={() => removeKeyword(index)}>Remove</button>
+        <button id="clear-button" on:click={() => clearKeyword(keyword)}>Clear</button>
+        <button id="remove-button" on:click={() => removeKeyword(index)}>Remove</button>
         <br>
       </div>
       {/each}
     </section>
     <br><br>
     <section id="action-section">
-      <button on:click={addKeyword}>Add Keyword</button>
+      <button id="add-button" on:click={addKeyword}>Add Keyword</button>
       <button id="search-button" on:click={handleSearch}>
         Search
       </button>
@@ -145,13 +145,33 @@
   input {
     outline: none;
     border: none;
-    border-radius: 10px;
+    border-bottom: 2px solid black;
     padding: 5px;
     font-size: 20px;
   }
 
   button:active {
     transform: scale(0.98);
+  }
+
+  #add-button {
+    background-color: rgb(9, 137, 15);
+    color: rgb(255, 255, 255);
+  }
+
+  #search-button {
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+  }
+
+  #clear-button {
+    background-color: rgb(255, 255, 0);
+    color: rgb(0, 0, 0);
+  }
+
+  #remove-button {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
   }
 
   footer {
