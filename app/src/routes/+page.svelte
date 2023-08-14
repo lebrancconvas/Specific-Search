@@ -30,6 +30,10 @@
   }
 
   let removeKeyword = (index: number) => {
+    if(searchKeywords.length === 1) {
+      alert('You cannot remove because you have only one keyword');
+      return;
+    }
     searchKeywords = searchKeywords.filter((keyword, i) => i !== index);
   };
 
